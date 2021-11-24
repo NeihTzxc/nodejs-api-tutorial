@@ -14,7 +14,9 @@ app.use(cors())
 const UserController = require('./controllers/user.controller')
 
 app.get('/user/get-all-user', UserController.getAllUser)
-
+app.post('/user/insert-user', UserController.insertUser)
+app.post('/user/update-user', UserController.updateUser)
+app.post('/user/delete-user', UserController.deleteUser)
 
 app.get('/healthz-ok', (req, res) => {
     const healthcheck = {
