@@ -17,6 +17,10 @@ app.get('/user/get-all-user', UserController.getAllUser)
 app.post('/user/insert-user', UserController.insertUser)
 app.post('/user/update-user', UserController.updateUser)
 app.post('/user/delete-user', UserController.deleteUser)
+app.get('/', (req, res) => {
+    res.send("OK");
+})
+
 
 app.get('/healthz-ok', (req, res) => {
     const healthcheck = {
